@@ -1,0 +1,13 @@
+<% layout('labHeadLayout') -%>
+<form method="post" action="/changeLabHeadPassword">
+    <label for="oldPassword">Old Password:</label>
+    <input type="password" name="oldPassword" id="oldPassword" autofocus />
+    <label for="newPassword">New Password:</label>
+    <input type="password" name="newPassword" id="newPassword" />
+    <label for="reNewPassword">Retype New Password:</label>
+    <input type="password" name="reNewPassword" id="reNewPassword" />
+    <input type="submit" value="Save" />
+</form>
+
+<script src="/scripts/jquery.js"></script>
+<script src="/scripts/settings.js"></script>

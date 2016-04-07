@@ -1,0 +1,20 @@
+<% layout('adminLayout') -%>
+<ul id="menuList">
+
+    <% var items = "SetSemester StudentGroups LabSlots PreferenceTable Round1 Round2 Round3 Results".split(' ') %> 
+    <% items.forEach(function(item){ 
+        %>
+            <li class="clickable" id="tab_<%= item.toLowerCase() %>"><%= item %></li>
+    <% }) %>
+</ul>
+<div id="content" class="hasBar">
+    <div id="content_header">
+        <h2></h2>
+    </div>
+    <p id="notice"></p>
+    <div class="other"></div>
+</div>
+
+<script src="/scripts/jquery.js"></script>
+<script src="/scripts/utility.js"></script>
+<script src="/scripts/admin.js"></script>

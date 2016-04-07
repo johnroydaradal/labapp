@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> - Lab Assignment App</title>
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
+  </head>
+  <body>
+    <div id="wrapper">
+        <div id="header">
+            <h1><a href="/">Lab Assignment App</a></h1>
+            <ul class="navigation">
+            </ul>
+        </div>
+        <div id="content">
+            <div id="messages">
+                <% if(messages.length) { %>
+                    <p><%= messages %></p>
+                <% } %>
+            </div>
+            <h2><%= title %></h2>
+            <form method="post" action="/authenticateLabHead">
+                <label for="lab">Lab:</label>
+                <select name="lab" id="lab" autofocus>
+                    <option value="acl">acl</option>
+                    <option value="csg">csg</option>
+                    <option value="cvmig">cvmig</option>
+                    <option value="ndsg">ndsg</option>
+                    <option value="s3">s3</option>
+                    <option value="scl">scl</option>
+                    <option value="wsg">wsg</option>
+                </select><br/>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password"  />
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+        <div id="footer">
+            <p>A Project of CS 397 ,FS 2014-2015 (<a href="/admin">Admin</a> | <a href="/">Lab Head </a>)</p>
+        </div>
+<script src="/scripts/jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $('#messages p').fadeIn('fast',function(){
+        var that = this;
+        setTimeout(function(){
+            $(that).fadeOut('fast');
+        },2000);
+    }); 
+});
+</script>
+
+    </div>
+  </body>
+</html>

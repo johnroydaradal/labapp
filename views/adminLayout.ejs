@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> - Lab Assignment App</title>
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
+  </head>
+  <body>
+    <div id="wrapper">
+        <div id="header">
+            <h1><a href="/admin">Lab Assignment App</a></h1>
+            <ul class="navigation">
+                <li>Welcome, Admin!</li>
+                <li><a href="/admin">Home</a></li>
+                <li><a href="/settingsAdmin">Settings</a></li>
+                <li><a href="/logoutAdmin">Logout</a></li>
+            </ul>
+        </div>
+        <div id="messages">
+            <% if(messages.length) { %>
+                <p><%= messages %></p>
+            <% } %>
+        </div>
+        <noscript>
+            <p>You need JavaScript to use the Lab Assignment App.</p>
+        </noscript>
+        <%- body %>
+        <div id="footer">
+            <p>A Project of CS 397 ,FS 2014-2015</p>
+        </div>
+    </div>
+  </body>
+</html>
